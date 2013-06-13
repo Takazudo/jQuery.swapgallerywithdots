@@ -1,6 +1,6 @@
 # jQuery.swapgallerywithdots
 
-show current dots
+swipable gallery with dots
 
 ## Demos
 
