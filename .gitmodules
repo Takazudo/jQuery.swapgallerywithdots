@@ -1,0 +1,9 @@
+[submodule "jQuery.currentDots"]
+	path = jQuery.currentDots
+	url = git://github.com/Takazudo/jQuery.currentDots.git
+[submodule "jQuery.touchdragh"]
+	path = jQuery.touchdragh
+	url = git://github.com/Takazudo/jQuery.touchdragh.git
+[submodule "EveEve"]
+	path = EveEve
+	url = git://github.com/Takazudo/EveEve.git
