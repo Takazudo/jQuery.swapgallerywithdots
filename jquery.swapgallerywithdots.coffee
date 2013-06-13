@@ -27,6 +27,7 @@ do ($=jQuery) ->
       @_eventify()
     
     countItems: ->
+
       return (@$gallery.find @options.selector_gallery_item).length
 
     _prepareTouchdragh: ->
@@ -34,12 +35,16 @@ do ($=jQuery) ->
       o = @options
       @$gallery = @$el.find o.selector_gallery_container
 
+      $items = @$gallery.find o.selector_gallery_item
+
       galleryOptions =
         inner: o.selector_gallery_inner
         item: o.selector_gallery_item
+        stepwidth: $items.eq(0).outerWidth()
+        maxindex: $items.length
 
-      @$gallery.touchdraghfitty galleryOptions
-      @touchdragh = @$gallery.data 'touchdraghfitty'
+      @$gallery.touchdraghsteppy galleryOptions
+      @touchdragh = @$gallery.data 'touchdraghsteppy'
 
       return this
 
@@ -72,8 +77,6 @@ do ($=jQuery) ->
       @$dots.currentDots dotOptions
       @dot = @$dots.data 'currentDots'
 
-      # @dotInstance.to(100)
-      
       return this
 
     _eventify: ->

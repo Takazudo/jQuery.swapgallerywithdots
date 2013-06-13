@@ -35,15 +35,18 @@
       };
 
       Main.prototype._prepareTouchdragh = function() {
-        var galleryOptions, o;
+        var $items, galleryOptions, o;
         o = this.options;
         this.$gallery = this.$el.find(o.selector_gallery_container);
+        $items = this.$gallery.find(o.selector_gallery_item);
         galleryOptions = {
           inner: o.selector_gallery_inner,
-          item: o.selector_gallery_item
+          item: o.selector_gallery_item,
+          stepwidth: $items.eq(0).outerWidth(),
+          maxindex: $items.length
         };
-        this.$gallery.touchdraghfitty(galleryOptions);
-        this.touchdragh = this.$gallery.data('touchdraghfitty');
+        this.$gallery.touchdraghsteppy(galleryOptions);
+        this.touchdragh = this.$gallery.data('touchdraghsteppy');
         return this;
       };
 
