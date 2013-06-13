@@ -1,3 +1,71 @@
-html {
-	border:3px solid red;
+html, body {
+  margin:0;
+  padding:0;
 }
+body {
+  padding-bottom:30px;
+}
+
+h1 {
+  font-size:13px;
+  text-align:center;
+}
+
+/* ====== */
+
+.swapgallerywithdots {
+  width:300px;
+  margin:0 auto 20px;
+}
+  .gallery {
+    width:300px;
+    height:300px;
+    overflow:hidden;
+    position:relative;
+    margin:0 0 10px;
+    background:#666;
+  }
+    .galleryinner {
+      position:absolute;
+      left:0;
+      top:0;
+    }
+      .galleryitem {
+        width:300px;
+        height:300px;
+        background:#f00;
+        color:#fff;
+        text-align:center;
+        line-height:300px;
+        float:left;
+        font-size:200px;
+      }
+  .dots {
+    text-align:center;
+  }
+    .dotitem {
+      display:inline-block;
+      *display:inline;
+      *zoom:1; /* ie */
+      vertical-align:top;
+      width:10px;
+      height:10px;
+      background:#000;
+      margin:0 2px;
+      border-radius:5px;
+      font-size:0px;
+      cursor:pointer;
+    }
+    .dotitem.active {
+    }
+      .dotitem.active span {
+        display:inline-block;
+        *display:inline;
+        *zoom:1; /* ie */
+        vertical-align:top;
+        width:6px;
+        height:6px;
+        margin:2px 0 0;
+        background:#fff;
+        border-radius:3px;
+      }
