@@ -1,5 +1,5 @@
 /*! jQuery.swapgallerywithdots (https://github.com/Takazudo/jQuery.swapgallerywithdots)
- * lastupdate: 2013-06-13
+ * lastupdate: 2013-07-29
  * version: 0.1.1
  * author: 'Takazudo' Takeshi Takatsudo <takazudo@gmail.com>
  * License: MIT */
@@ -43,7 +43,7 @@
           inner: o.selector_gallery_inner,
           item: o.selector_gallery_item,
           stepwidth: $items.eq(0).outerWidth(),
-          maxindex: $items.length
+          maxindex: $items.length - 1
         };
         this.$gallery.touchdraghsteppy(galleryOptions);
         this.touchdragh = this.$gallery.data('touchdraghsteppy');

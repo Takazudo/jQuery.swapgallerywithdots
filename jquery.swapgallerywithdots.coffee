@@ -41,7 +41,7 @@ do ($=jQuery) ->
         inner: o.selector_gallery_inner
         item: o.selector_gallery_item
         stepwidth: $items.eq(0).outerWidth()
-        maxindex: $items.length
+        maxindex: $items.length - 1
 
       @$gallery.touchdraghsteppy galleryOptions
       @touchdragh = @$gallery.data 'touchdraghsteppy'
