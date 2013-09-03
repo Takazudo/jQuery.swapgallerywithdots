@@ -4,12 +4,10 @@ html, body {
 }
 body {
   padding-bottom:30px;
+  text-align:center;
+  font-size:10px;
 }
 
-h1 {
-  font-size:13px;
-  text-align:center;
-}
 
 /* ====== */
 

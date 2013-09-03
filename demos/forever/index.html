@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQuery.swapgallerywithdots</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<script src="../../EveEve/eveeve.js"></script>
+<script src="../../libs/jquery/1.5.1/jquery.js"></script>
+<script src="../../libs/jquery.transit.js"></script>
+<script src="../../jQuery.touchdragh/jquery.touchdragh.js"></script>
+<script src="../../jQuery.currentDots/jquery.currentdots.js"></script>
+<script src="../../jquery.swapgallerywithdots.js"></script>
+<script>
+$(function() {
+
+  $('.swapgallerywithdots').swapgallerywithdots({
+
+    selector_gallery_container: '.gallery',
+    selector_gallery_inner: '.galleryinner',
+    selector_gallery_inner2: '.galleryinner2',
+    selector_gallery_item: '.galleryitem',
+
+    selector_dot_container: '.dots',
+    selector_dot_item: '.dotitem',
+    class_dot_activeItem: 'active',
+    class_dot_inactiveItem: 'inactive',
+
+    src_dotItem: '<div class="dotitem"><span></span></div>',
+
+    stepwidth: 300,
+    widthbetween: 20,
+    forever: true,
+    inner2left: -20
+
+  });
+
+});
+</script>
+</head>
+<body>
+
+<h1><a href="https://github.com/Takazudo/jQuery.swapgallerywithdots">jQuery.swapgallerywithdots</a></h1>
+
+<h2>forever option</h2>
+
+<div class="swapgallerywithdots">
+  <div class="gallery">
+    <div class="galleryinner">
+      <div class="galleryinner2">
+        <div class="galleryitem">A</div>
+        <div class="galleryitem">B</div>
+        <div class="galleryitem">C</div>
+        <div class="galleryitem">D</div>
+        <div class="galleryitem">E</div>
+      </div>
+    </div>
+  </div>
+  <div class="dots"></div>
+<!-- /.swapgallerywithdots --></div>
+
+</body>
+</html>
