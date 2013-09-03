@@ -4,7 +4,8 @@ swipable gallery with dots
 
 ## Demos
 
-* [Basic](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/1/)
+* [basic](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/basic/)
+* [forever option](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/forever/)
 
 ## Usage
 
@@ -15,6 +16,7 @@ see demos
 * [EveEve](https://github.com/Takazudo/EveEve)
 * [jQuery.touchdragh](https://github.com/Takazudo/jQuery.touchdragh)
 * [jQuery.currentDots](https://github.com/Takazudo/jQuery.currentDots)
+* [jquery.transit](http://ricostacruz.com/jquery.transit/) - if you want to use transition.
 * jQuery 1.9.1 (>=1.5.1)
 
 ## Browsers
