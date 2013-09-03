@@ -1,5 +1,9 @@
 # Change log
 
+## v0.1.3
+
+* implemented `forever` option
+
 ## v0.1.2
 
 * incorrect options.maxindex was passed to steppy.
