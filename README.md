@@ -7,6 +7,7 @@ swipable gallery with dots
 * [basic](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/basic/)
 * [forever option](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/forever/)
 * [normalize_height option](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/normalize_height/)
+* [button demo](http://takazudo.github.io/jQuery.swapgallerywithdots/demos/with_buttons/)
 
 ## Usage
 
