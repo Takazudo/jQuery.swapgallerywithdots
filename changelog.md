@@ -1,5 +1,9 @@
 # Change log
 
+## v0.1.4
+
+* implemented `normalize_height` option
+
 ## v0.1.3
 
 * implemented `forever` option

@@ -1,5 +1,5 @@
 /*! jQuery.swapgallerywithdots (https://github.com/Takazudo/jQuery.swapgallerywithdots)
- * lastupdate: 2013-09-03
+ * lastupdate: 2013-09-04
  * version: 0.1.3
  * author: 'Takazudo' Takeshi Takatsudo <takazudo@gmail.com>
  * License: MIT */
@@ -24,7 +24,9 @@
         widthbetween: 0,
         forever: false,
         forever_duplicate_count: 1,
-        maxindex: 'auto'
+        maxindex: 'auto',
+        normalize_height: true,
+        normalize_height_on_resize: true
       };
 
       function Main($el, options) {
@@ -58,7 +60,9 @@
           maxindex: o.maxindex,
           forever: o.forever,
           forever_duplicate_count: o.forever_duplicate_count,
-          inner2left: o.inner2left || 0
+          inner2left: o.inner2left || 0,
+          normalize_height: o.normalize_height,
+          normalize_height_on_resize: o.normalize_height_on_resize
         };
         this.$gallery.touchdraghsteppy(galleryOptions);
         this.touchdragh = this.$gallery.data('touchdraghsteppy');

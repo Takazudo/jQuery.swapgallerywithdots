@@ -24,6 +24,8 @@ do ($=jQuery) ->
       forever: false
       forever_duplicate_count: 1
       maxindex: 'auto'
+      normalize_height: true
+      normalize_height_on_resize: true
     
     constructor: (@$el, options) ->
       
@@ -57,6 +59,8 @@ do ($=jQuery) ->
         forever: o.forever
         forever_duplicate_count: o.forever_duplicate_count
         inner2left: o.inner2left or 0
+        normalize_height: o.normalize_height
+        normalize_height_on_resize: o.normalize_height_on_resize
 
       @$gallery.touchdraghsteppy galleryOptions
       @touchdragh = @$gallery.data 'touchdraghsteppy'
