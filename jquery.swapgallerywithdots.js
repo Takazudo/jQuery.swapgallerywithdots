@@ -1,14 +1,18 @@
 /*! jQuery.swapgallerywithdots (https://github.com/Takazudo/jQuery.swapgallerywithdots)
- * lastupdate: 2013-09-04
- * version: 0.1.4
+ * lastupdate: 2013-09-05
+ * version: 0.1.5
  * author: 'Takazudo' Takeshi Takatsudo <takazudo@gmail.com>
  * License: MIT */
 (function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   (function($) {
     var ns;
     ns = {};
-    ns.Main = (function() {
+    ns.Main = (function(_super) {
+
+      __extends(Main, _super);
 
       Main.defaults = {
         selector_gallery_container: null,
@@ -102,31 +106,23 @@
           return _this.touchdragh.to(data.index, true);
         });
         this.touchdragh.on('indexchange', function(data) {
-          var index;
-          index = _this._normalizeIndexForDot(data.index);
-          return _this.dot.to(index);
+          var i;
+          if (_this.options.forever) {
+            i = data.normalizedIndex;
+          } else {
+            i = data.index;
+          }
+          _this.dot.to(i);
+          return _this.trigger('indexchange', {
+            index: i
+          });
         });
         return this;
       };
 
-      Main.prototype._normalizeIndexForDot = function(index) {
-        var o, offset, res;
-        o = this.options;
-        offset = this._itemsCount * o.forever_duplicate_count;
-        index = index - offset;
-        res = index % this._itemsCount;
-        if (index < 0) {
-          res = this._itemsCount - (Math.abs(res));
-          if (res === this._itemsCount) {
-            res = 0;
-          }
-        }
-        return res;
-      };
-
       return Main;
 
-    })();
+    })(window.EveEve);
     $.fn.swapgallerywithdots = function(options) {
       return this.each(function(i, el) {
         var $el, instance;

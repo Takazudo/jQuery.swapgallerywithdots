@@ -6,7 +6,7 @@ do ($=jQuery) ->
   # ============================================================
   # Main
 
-  class ns.Main
+  class ns.Main extends window.EveEve
 
     @defaults =
       selector_gallery_container: null
@@ -103,21 +103,14 @@ do ($=jQuery) ->
         @touchdragh.to data.index, true
 
       @touchdragh.on 'indexchange', (data) =>
-        index = @_normalizeIndexForDot data.index
-        @dot.to index
+        if @options.forever
+          i = data.normalizedIndex
+        else
+          i = data.index
+        @dot.to i
+        @trigger 'indexchange', index: i
       
       return this
-
-    _normalizeIndexForDot: (index) ->
-      o = @options
-      offset = @_itemsCount * o.forever_duplicate_count
-      index = index - offset
-      res = index % @_itemsCount
-      if index < 0
-        res = @_itemsCount - (Math.abs res)
-        if res is @_itemsCount
-          res = 0
-      res
 
   # ============================================================
   # bridge to plugin
