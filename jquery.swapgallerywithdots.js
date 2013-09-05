@@ -1,6 +1,6 @@
 /*! jQuery.swapgallerywithdots (https://github.com/Takazudo/jQuery.swapgallerywithdots)
  * lastupdate: 2013-09-05
- * version: 0.1.5
+ * version: 0.1.6
  * author: 'Takazudo' Takeshi Takatsudo <takazudo@gmail.com>
  * License: MIT */
 (function() {
