@@ -1,5 +1,9 @@
 # Change log
 
+## v0.1.6
+
+* handled touchdragh's normalizedIndex
+
 ## v0.1.5
 
 * added demo
